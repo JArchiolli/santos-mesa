@@ -1,5 +1,5 @@
-import { CategoryController } from '@app/category/category.controller';
 import { Module } from '@nestjs/common';
+import { CategoryController } from '@app/category/category.controller';
 import { AuthController } from './auth/auth.controller';
 import { UserController } from '@app/user/user.controller';
 import { RestaurantController } from '@app/restaurant/restaurant.controller';
