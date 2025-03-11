@@ -1,6 +1,5 @@
 import { CategoryController } from '@app/category/category.controller';
 import { Module } from '@nestjs/common';
-import { PrismaModule } from 'prisma/prisma.module';
 import { AuthController } from './auth/auth.controller';
 import { UserController } from '@app/user/user.controller';
 import { RestaurantController } from '@app/restaurant/restaurant.controller';
@@ -11,12 +10,13 @@ import { JwtModule } from '@nestjs/jwt';
 import { RestaurantModule } from '@app/restaurant/restaurant.module';
 import { CategoryModule } from '@app/category/category.module';
 import { LocationModule } from '@app/location/location.module';
-import { PrismaService } from 'prisma/prisma.service';
 import { CategoryService } from '@app/category/category.service';
 import { AuthService } from './auth/auth.service';
 import { UserService } from '@app/user/user.service';
 import { RestaurantService } from '@app/restaurant/restaurant.service';
 import { LocationService } from '@app/location/location.service';
+import { PrismaModule } from '../prisma/prisma.module';
+import { PrismaService } from '../prisma/prisma.service';
 
 @Module({
   imports: [PrismaModule, AuthModule, UserModule, JwtModule, RestaurantModule, CategoryModule, LocationModule],
