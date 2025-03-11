@@ -3,9 +3,7 @@ import { PrismaModule } from '../prisma/prisma.module';
 import { CategoryController } from './app/category/category.controller';
 import { PrismaService } from '../prisma/prisma.service';
 import { CategoryModule } from './app/category/category.module';
-import { AuthController } from 'auth/auth.controller';
 import { CategoryService } from './app/category/category.service';
-import { AuthService } from 'auth/auth.service';
 import { UserService } from './app/user/user.service';
 import { RestaurantService } from './app/restaurant/restaurant.service';
 import { UserController } from './app/user/user.controller';
@@ -17,6 +15,8 @@ import { AuthModule } from './auth/auth.module';
 import { LocationController } from './app/location/location.controller';
 import { LocationModule } from './app/location/location.module';
 import { LocationService } from './app/location/location.service';
+import { AuthController } from './auth/auth.controller';
+import { AuthService } from './auth/auth.service';
 
 
 @Module({
