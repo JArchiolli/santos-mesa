@@ -11,9 +11,15 @@ import { CategoryService } from './app/Category/category.service';
 import { JwtModule } from '@nestjs/jwt';
 import { PrismaModule } from 'prisma/prisma.module';
 import { PrismaService } from 'prisma/prisma.service';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [PrismaModule, CategoryModule, AuthModule, UserModule, JwtModule],
+  imports: [ConfigModule.forRoot({ isGlobal: true }),
+    PrismaModule,
+    CategoryModule,
+    AuthModule,
+    UserModule,
+    JwtModule],
   controllers: [CategoryController, AuthController, UserController],
   providers: [PrismaService, CategoryService, AuthService, UserService],
 })

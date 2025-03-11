@@ -3,13 +3,13 @@ import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
-import { UserModule } from '../app/User/user.module'; // 🔥 Importa corretamente
-import { JwtStrategy } from './strategies/jwt.strategy';
+import { UserModule } from '../app/User/user.module'; 
+import { JwtStrategy } from './strategies/google.strategy';
 
 @Module({
   imports: [
     PassportModule,
-    UserModule, // 🔥 Agora o UserService será resolvido corretamente
+    UserModule, 
     JwtModule.register({
       secret: 'secretKey',
       signOptions: { expiresIn: '1h' },
